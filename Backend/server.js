@@ -27,6 +27,11 @@ app.post('/auth/login' , async (req, res) => {
     }
 });
 
+app.get('/ping',(req,res) => {
+res.json({msg: 'pong'});
+});
+
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
